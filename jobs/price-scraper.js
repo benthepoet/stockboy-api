@@ -30,7 +30,7 @@ async function run() {
 async function fetchQuotes(stockChunk) {
     const options = {
         params: {
-            apikey: alphaVantage.apikey,
+            apikey: process.env.AV_KEY,
             function: 'BATCH_STOCK_QUOTES',
             symbols: stockChunk.map(stock => stock.symbol).join(',')
         }

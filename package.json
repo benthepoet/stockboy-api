@@ -1,10 +1,10 @@
 {
   "name": "stockboy-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "The back-end for Stock Boy, a stock trading simulator.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node --require dotenv/config index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "cheerio": "^1.0.0-rc.2",
     "connect-nocache": "^1.1.0",
     "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
     "express": "^4.15.3",
     "express-jwt": "^5.3.0",
     "jsonwebtoken": "^7.4.2",
