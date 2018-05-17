@@ -13,7 +13,17 @@ async function run() {
 
     for (let stockChunk of stockChunks) {
         const quotes = await fetchQuotes(stockChunk);
-        console.log(quotes);
+
+        const updates = quotes.map(quote => {
+            return Stock()
+                .where('symbol', quote.symbol)
+                .update({
+                    last_price: quote.price,
+                    updated_at: new Date()
+                });
+        });
+
+        await Promise.all(updates);
     }
 }
 
@@ -41,9 +51,9 @@ async function fetchQuotes(stockChunk) {
     return quotePipeline(data);
 }
 
-try {
-    run();
-} catch (error) {
-    console.log(error);
-    process.exit();
-}
+run()
+    .then(() => process.exit())
+    .catch(error => {
+        console.log(error);
+        process.exit();
+    });
