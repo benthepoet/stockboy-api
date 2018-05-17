@@ -1,0 +1,31 @@
+{
+  "name": "stockboy-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/benthepoet/stockboy-api.git"
+  },
+  "author": "Ben Hanna <benpaulhanna@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/benthepoet/stockboy-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
+    "connect-nocache": "^1.1.0",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "express-jwt": "^5.3.0",
+    "jsonwebtoken": "^7.4.2",
+    "knex": "^0.13.0",
+    "mysql": "^2.14.1",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4",
+    "underscore": "^1.9.0"
+  }
+}
