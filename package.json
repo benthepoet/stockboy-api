@@ -8,11 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/benthepoet/stockboy-api.git"
+    "url": "git+https://github.com/benthepoet/stockboy-api.git"
   },
   "author": "Ben Hanna <benpaulhanna@gmail.com>",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/benthepoet/stockboy-api#readme",
+  "license": "BSD3",
+  "bugs": {
+    "url": "https://github.com/benthepoet/stockboy-api/issues"
+  },
+  "homepage": "https://github.com/benthepoet/stockboy-api#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
