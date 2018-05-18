@@ -1,16 +1,16 @@
+const axios = require('axios');
 const cheerio = require('cheerio');
-const request = require('request-promise-native');
 
 const { Stock } = require('../lib/data/accessor');
 
 const url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies";
 
 function run() {
-    request(url)
+    axios.get(url)
         .then(process);
         
-    function process(body) {
-        const $ = cheerio.load(body);
+    function process({ data }) {
+        const $ = cheerio.load(data);
         const tables = $('tbody', '#mw-content-text table');
         
         $(tables.eq(0))

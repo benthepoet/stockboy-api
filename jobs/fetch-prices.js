@@ -1,7 +1,6 @@
 const axios = require('axios');
 const _ = require('underscore');
 
-const { alphaVantage } = require('../secrets.json');
 const { Stock } = require('../lib/data/accessor');
 
 const CHUNK_SIZE = 100;
