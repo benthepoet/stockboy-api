@@ -2,9 +2,9 @@
   "name": "stockboy-api",
   "version": "1.0.0",
   "description": "The back-end for Stock Boy, a stock trading simulator.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "serve": "node --require dotenv/config index.js"
+    "start": "node --require dotenv/config app.js"
   },
   "repository": {
     "type": "git",
