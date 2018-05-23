@@ -7,7 +7,9 @@ class JobScheduler {
     this.jobs = [
       new CronJob('*/5 13-21 * * 1-5', fetchPrices)
     ];
-    
+  }
+  
+  start() {
     this.jobs.forEach(job => job.start());
   }
 }
