@@ -19,3 +19,7 @@ app.use(errorHandler);
 
 // Start the application
 app.listen(process.env.PORT, () => console.log('API ready'));
+
+// Create the job scheduler
+const JobScheduler = require('./jobs');
+const jobScheduler = new JobScheduler();

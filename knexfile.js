@@ -6,7 +6,7 @@ module.exports = {
         password: process.env.DB_PASSWORD,
         database: process.env.DB_NAME
     },
-    debug: true,
+    debug: false,
     migrations: {
         tableName: 'knex_migrations'
     }

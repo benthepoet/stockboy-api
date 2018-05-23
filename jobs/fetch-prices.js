@@ -7,6 +7,8 @@ const CHUNK_SIZE = 100;
 const API_URL = 'https://www.alphavantage.co/query';
 
 async function run() {
+    console.log('RUN: fetchPrices');
+    
     const stocks = await Stock().select();
     const stockChunks = _.chunk(stocks, CHUNK_SIZE);
 
@@ -50,9 +52,4 @@ async function fetchQuotes(stockChunk) {
     return quotePipeline(data);
 }
 
-run()
-    .then(() => process.exit())
-    .catch(error => {
-        console.log(error);
-        process.exit();
-    });
+module.exports = run;
