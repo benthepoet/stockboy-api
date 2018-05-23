@@ -4,6 +4,7 @@
   "description": "The back-end for Stock Boy, a stock trading simulator.",
   "main": "app.js",
   "scripts": {
+    "job": "node --require dotenv/config",
     "start": "node --require dotenv/config app.js"
   },
   "repository": {
