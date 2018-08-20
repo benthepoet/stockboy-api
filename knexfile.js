@@ -3,7 +3,7 @@ module.exports = {
     connection: {
         filename: ':memory:'
     },
-    debug: false,
+    debug: true,
     migrations: {
         tableName: 'knex_migrations'
     }
