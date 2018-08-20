@@ -1,7 +1,7 @@
 module.exports = {
     client: 'sqlite',
     connection: {
-        filename: ':memory:'
+        filename: process.env.DB_FILENAME
     },
     debug: true,
     migrations: {
