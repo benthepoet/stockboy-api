@@ -17,12 +17,19 @@ app.use(cors());
 app.use(api);
 app.use(errorHandler);
 
-// Start the application
-app.listen(process.env.PORT, () => console.log('API ready'));
+const { knex } = require('./lib/data/accessor');
 
-// Create the job scheduler
-const JobScheduler = require('./jobs');
-const scheduler = new JobScheduler();
+knex.migrate
+    .latest()
+    .then(() => {
+        // Start the application
+        app.listen(process.env.PORT, () => console.log('API ready'));
+        
+        // Create the job scheduler
+        const JobScheduler = require('./jobs');
+        const scheduler = new JobScheduler();
+        
+        // Start the job scheduler
+        scheduler.start();
+    });
 
-// Start the job scheduler
-scheduler.start();
