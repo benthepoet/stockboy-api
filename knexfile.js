@@ -4,8 +4,7 @@ module.exports = {
         filename: ':memory:'
     },
     pool: {
-        min: 1,
-        max: 1
+        evictionRunIntervalMillis: 0
     },
     debug: true,
     migrations: {
